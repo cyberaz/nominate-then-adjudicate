@@ -1,0 +1,3187 @@
+{
+ "meta": {
+  "names_file": "data/results/miplib_cands16.json",
+  "cache": "data/results/training_cache_multi.json",
+  "pool": "config_100.json",
+  "skill": "skills/skill_multi16.md",
+  "top_k": 10,
+  "time_limit": 30.0,
+  "repeats": 1,
+  "id_convention": "pool position",
+  "at": "2026-08-11 18:42:11"
+ },
+ "results": [
+  {
+   "name": "mas76",
+   "features": [
+    12.0,
+    151.0,
+    1640.0,
+    0.9050772626931567,
+    0.9933774834437086,
+    0.0,
+    0.006622516556291391,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    136.66666666666666,
+    10.860927152317881,
+    0.6187845159117408,
+    1.0,
+    0.3015113445777636,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53708,
+   "top_ids": [
+    0,
+    48,
+    1,
+    65,
+    81,
+    52,
+    75,
+    33,
+    42,
+    23
+   ],
+   "top_pred": [
+    1.2574973106384277,
+    1.2250645160675049,
+    1.222071886062622,
+    1.2048182487487793,
+    1.1645944118499756,
+    1.1459728479385376,
+    1.1212913990020752,
+    1.1172640323638916,
+    1.096944808959961,
+    1.0823994874954224
+   ],
+   "choice": 2,
+   "reason": "Generalized from multidim_knapsack due to the dense binary matrix with medium coefficient CV and >=10 rows, selecting 48 as the most stable fallback and vetoing 33.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 48",
+    "smac": "k=8 cluster 2",
+    "roar": "k=4 cluster 2",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.644620180130005,
+     "times": [
+      29.645
+     ],
+     "status": "timelimit",
+     "nodes": 3071,
+     "objective": 40005.05414199999,
+     "gap": 0.021564662145737868,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.93358278274536,
+     "times": [
+      29.934
+     ],
+     "status": "timelimit",
+     "nodes": 105138,
+     "objective": 40005.054142,
+     "gap": 0.014181858172579524,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "isacplus": {
+     "time": 29.963757038116455,
+     "times": [
+      29.964
+     ],
+     "status": "timelimit",
+     "nodes": 689,
+     "objective": 40560.05414199999,
+     "gap": 0.03677140769192833,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.967925310134888,
+     "times": [
+      29.968
+     ],
+     "status": "timelimit",
+     "nodes": 592,
+     "objective": 40560.05414199999,
+     "gap": 0.036997631635937195,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.970536947250366,
+     "times": [
+      29.971
+     ],
+     "status": "timelimit",
+     "nodes": 51730,
+     "objective": 40005.054141999986,
+     "gap": 0.01581716094061099,
+     "has_solution": true,
+     "verdict": "better"
+    }
+   }
+  },
+  {
+   "name": "mas74",
+   "features": [
+    13.0,
+    151.0,
+    1706.0,
+    0.869077941925624,
+    0.9933774834437086,
+    0.0,
+    0.006622516556291391,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    131.23076923076923,
+    11.298013245033113,
+    0.6378340341261197,
+    1.0,
+    0.2886751345948129,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53702,
+   "top_ids": [
+    1,
+    0,
+    65,
+    48,
+    81,
+    33,
+    75,
+    52,
+    27,
+    42
+   ],
+   "top_pred": [
+    1.3047200441360474,
+    1.2948626279830933,
+    1.2711085081100464,
+    1.2645889520645142,
+    1.2036510705947876,
+    1.1971209049224854,
+    1.1813528537750244,
+    1.1768908500671387,
+    1.147458791732788,
+    1.1412644386291504
+   ],
+   "choice": 4,
+   "reason": "Generalized from multidim_knapsack due to the dense binary matrix with medium coefficient CV and multi-row structure, triggering the explicit rule to deviate from Top-1 (1) to 48.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 48",
+    "smac": "k=8 cluster 2",
+    "roar": "k=4 cluster 2",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.93194079399109,
+     "times": [
+      29.932
+     ],
+     "status": "timelimit",
+     "nodes": 1189,
+     "objective": 12640.371258200006,
+     "gap": 0.1812837286294298,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.901934146881104,
+     "times": [
+      29.902
+     ],
+     "status": "timelimit",
+     "nodes": 64391,
+     "objective": 12292.48494310001,
+     "gap": 0.12046507129551182,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "isacplus": {
+     "time": 29.918315172195435,
+     "times": [
+      29.918
+     ],
+     "status": "timelimit",
+     "nodes": 531,
+     "objective": 12578.118745899992,
+     "gap": 0.17933461511533502,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.979673147201538,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 679,
+     "objective": 12578.118745899992,
+     "gap": 0.17611257880096826,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.973636627197266,
+     "times": [
+      29.974
+     ],
+     "status": "timelimit",
+     "nodes": 77906,
+     "objective": 12254.694360600022,
+     "gap": 0.12029537005173777,
+     "has_solution": true,
+     "verdict": "better"
+    }
+   }
+  },
+  {
+   "name": "mad",
+   "features": [
+    51.0,
+    220.0,
+    2808.0,
+    0.25026737967914436,
+    0.9090909090909091,
+    0.0,
+    0.09090909090909091,
+    20.0,
+    0.5882352941176471,
+    0.4117647058823529,
+    30.0,
+    0.0,
+    55.05882352941177,
+    12.763636363636364,
+    1.315035382371956,
+    0.09090909090909091,
+    1.6514456476895407,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 5,
+   "prompt_chars": 54318,
+   "top_ids": [
+    51,
+    48,
+    25,
+    56,
+    77,
+    1,
+    0,
+    53,
+    41,
+    44
+   ],
+   "top_pred": [
+    0.9925838708877563,
+    0.8724314570426941,
+    0.833561360836029,
+    0.7329975366592407,
+    0.7298937439918518,
+    0.7280423045158386,
+    0.7079355716705322,
+    0.7049804925918579,
+    0.6938062906265259,
+    0.6614909768104553
+   ],
+   "choice": 6,
+   "reason": "Generalizing from set_covering due to the presence of set partitioning, packing, and cardinality constraints over binaries; the rule for row_count < 100 strongly prioritizes config 1 (Candidate 6), while 44 is vetoed and 48 is a known trap.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 1",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.93874764442444,
+     "times": [
+      29.939
+     ],
+     "status": "timelimit",
+     "nodes": 10072,
+     "objective": 0.2224,
+     "gap": 1e+20,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.939953327178955,
+     "times": [
+      29.94
+     ],
+     "status": "timelimit",
+     "nodes": 60709,
+     "objective": 0.19359999999999933,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 29.976187705993652,
+     "times": [
+      29.976
+     ],
+     "status": "timelimit",
+     "nodes": 13027,
+     "objective": 0.1807999999999997,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.964025259017944,
+     "times": [
+      29.964
+     ],
+     "status": "timelimit",
+     "nodes": 782,
+     "objective": 0.2448000000000004,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.980012893676758,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 6876,
+     "objective": 0.29439999999999983,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    }
+   }
+  },
+  {
+   "name": "neos5",
+   "features": [
+    63.0,
+    63.0,
+    2016.0,
+    0.5079365079365079,
+    0.8412698412698413,
+    0.0,
+    0.15873015873015872,
+    0.0,
+    0.0,
+    1.0,
+    63.0,
+    0.0,
+    32.0,
+    32.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53555,
+   "top_ids": [
+    65,
+    3,
+    98,
+    1,
+    63,
+    56,
+    25,
+    13,
+    35,
+    62
+   ],
+   "top_pred": [
+    2.096151828765869,
+    2.0726478099823,
+    1.9479554891586304,
+    1.945338249206543,
+    1.9002751111984253,
+    1.8752871751785278,
+    1.8533345460891724,
+    1.8520246744155884,
+    1.846449375152588,
+    1.8348438739776611
+   ],
+   "choice": 2,
+   "reason": "Generalized from set_covering due to >= constraints with all +1 coefficients, matching the small row count (<100) and small objective mean (<5) rule to prioritize config 3.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 3",
+    "smac": "k=8 cluster 2",
+    "roar": "k=4 cluster 2",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.958746194839478,
+     "times": [
+      29.959
+     ],
+     "status": "timelimit",
+     "nodes": 17609,
+     "objective": 15.0,
+     "gap": 0.0650887573964498,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.97772717475891,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 39559,
+     "objective": 15.0,
+     "gap": 0.06598984771573592,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 29.979134559631348,
+     "times": [
+      29.979
+     ],
+     "status": "timelimit",
+     "nodes": 14330,
+     "objective": 15.0,
+     "gap": 0.06719367588932794,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.95962119102478,
+     "times": [
+      29.96
+     ],
+     "status": "timelimit",
+     "nodes": 15139,
+     "objective": 15.0,
+     "gap": 0.06666666666666667,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.961327075958252,
+     "times": [
+      29.961
+     ],
+     "status": "timelimit",
+     "nodes": 68283,
+     "objective": 15.0,
+     "gap": 0.07142857142857142,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "neos-911970",
+   "features": [
+    107.0,
+    888.0,
+    3408.0,
+    0.03586764334427886,
+    0.9459459459459459,
+    0.0,
+    0.05405405405405406,
+    48.0,
+    0.32710280373831774,
+    0.6728971962616822,
+    59.0,
+    0.0,
+    31.850467289719628,
+    3.8378378378378377,
+    1.8207061442711296,
+    0.05405405405405406,
+    1.8596594670351163,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 54332,
+   "top_ids": [
+    0,
+    80,
+    51,
+    91,
+    56,
+    75,
+    7,
+    52,
+    73,
+    48
+   ],
+   "top_pred": [
+    1.1418129205703735,
+    1.1332117319107056,
+    1.1151221990585327,
+    1.0555782318115234,
+    1.0331885814666748,
+    1.0330257415771484,
+    1.007800817489624,
+    1.005557894706726,
+    1.003235936164856,
+    1.0031944513320923
+   ],
+   "choice": 2,
+   "reason": "The instance structure features set partitioning and set covering constraints with a wide matrix (col_count=888 > 250), mapping to the set_covering class where config 80 is explicitly prioritized for wide matrices, especially since configs 1, 3, and 5 (preferred for small obj_mean) are absent from t",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 80",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 7/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.963390827178955,
+     "times": [
+      29.963
+     ],
+     "status": "timelimit",
+     "nodes": 3712,
+     "objective": 54.76,
+     "gap": 0.00791505405145736,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.962931156158447,
+     "times": [
+      29.963
+     ],
+     "status": "timelimit",
+     "nodes": 303,
+     "objective": 68.43,
+     "gap": 0.8429627556575574,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.979177474975586,
+     "times": [
+      29.979
+     ],
+     "status": "timelimit",
+     "nodes": 862,
+     "objective": 57.36999999999999,
+     "gap": 0.07243751834475425,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.985671043395996,
+     "times": [
+      29.986
+     ],
+     "status": "timelimit",
+     "nodes": 842,
+     "objective": 57.36999999999999,
+     "gap": 0.07243751834475425,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.98440933227539,
+     "times": [
+      29.984
+     ],
+     "status": "timelimit",
+     "nodes": 633,
+     "objective": 54.75999999999999,
+     "gap": 0.03654690910400553,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "pg",
+   "features": [
+    125.0,
+    2700.0,
+    5200.0,
+    0.015407407407407408,
+    0.037037037037037035,
+    0.0,
+    0.9629629629629629,
+    0.0,
+    0.8,
+    0.2,
+    0.0,
+    0.0,
+    41.6,
+    1.9259259259259258,
+    2.345371371773483,
+    0.9629629629629629,
+    0.23873691396147087,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53826,
+   "top_ids": [
+    0,
+    12,
+    55,
+    52,
+    91,
+    83,
+    23,
+    93,
+    42,
+    61
+   ],
+   "top_pred": [
+    1.220774531364441,
+    1.1281005144119263,
+    1.1178433895111084,
+    1.114149570465088,
+    1.0900790691375732,
+    1.0708231925964355,
+    1.0625700950622559,
+    1.0371543169021606,
+    1.0362968444824219,
+    1.0259729623794556
+   ],
+   "choice": 1,
+   "reason": "Generalized from facility_location, strictly following the cross-type hallucination warning (continuous_ratio > 0.95 with cap constraints) to conservatively trust EPM Top-1 (0) since no specific deviation rules (like 85 or 11) are triggered, mean_nonzeros <= 55, and avoiding candidates that dangerou",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 0",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 7/8"
+   },
+   "arms": {
+    "default": {
+     "time": 28.315411806106567,
+     "times": [
+      28.315
+     ],
+     "status": "optimal",
+     "nodes": 161,
+     "objective": -8674.342607117022,
+     "gap": 0.0,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.62839365005493,
+     "times": [
+      29.628
+     ],
+     "status": "timelimit",
+     "nodes": 959,
+     "objective": -8534.283593045866,
+     "gap": 0.16117714631462715,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.977708339691162,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 1104,
+     "objective": -8665.32201504393,
+     "gap": 0.04108598300040344,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.978169679641724,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 1071,
+     "objective": -8665.32201504393,
+     "gap": 0.044886334168479584,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.978830337524414,
+     "times": [
+      29.979
+     ],
+     "status": "timelimit",
+     "nodes": 2244,
+     "objective": -8657.307444179967,
+     "gap": 0.024004672114715044,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "assign1-5-8",
+   "features": [
+    161.0,
+    156.0,
+    3720.0,
+    0.148112756808409,
+    0.8333333333333334,
+    0.0,
+    0.16666666666666666,
+    0.0,
+    0.19254658385093168,
+    0.8074534161490683,
+    31.0,
+    0.0,
+    23.1055900621118,
+    23.846153846153847,
+    0.4472053753921452,
+    0.16666666666666666,
+    0.48832523840319625,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 3,
+   "prompt_chars": 53927,
+   "top_ids": [
+    3,
+    56,
+    65,
+    0,
+    21,
+    42,
+    89,
+    13,
+    53,
+    80
+   ],
+   "top_pred": [
+    0.8900566697120667,
+    0.8363422751426697,
+    0.7667468190193176,
+    0.7564125061035156,
+    0.731803834438324,
+    0.7165409922599792,
+    0.7032468318939209,
+    0.6899181008338928,
+    0.6894412636756897,
+    0.6877555847167969
+   ],
+   "choice": 1,
+   "reason": "Generalized from set_covering due to the presence of set partitioning and cardinality constraints over binary variables, making the EPM Top-1 configuration 3 a core and highly reliable safe fallback.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 3",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.977818250656128,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 3313,
+     "objective": 212.0,
+     "gap": 0.09576819311978056,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.964103937149048,
+     "times": [
+      29.964
+     ],
+     "status": "timelimit",
+     "nodes": 31936,
+     "objective": 211.99999999999997,
+     "gap": 0.11036390479337106,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.981127738952637,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 11193,
+     "objective": 212.0,
+     "gap": 0.09298506996851105,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.967371225357056,
+     "times": [
+      29.967
+     ],
+     "status": "timelimit",
+     "nodes": 24180,
+     "objective": 212.0,
+     "gap": 0.09410527438875171,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.990327835083008,
+     "times": [
+      29.99
+     ],
+     "status": "timelimit",
+     "nodes": 18121,
+     "objective": 212.0,
+     "gap": 0.11779185712342762,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "neos859080",
+   "features": [
+    164.0,
+    160.0,
+    1280.0,
+    0.04878048780487805,
+    0.5,
+    0.5,
+    0.0,
+    0.0,
+    0.2621951219512195,
+    0.7378048780487805,
+    40.0,
+    0.0,
+    7.804878048780488,
+    8.0,
+    1.39427400463467,
+    0.5,
+    0.3085148936749638,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 53815,
+   "top_ids": [
+    0,
+    7,
+    32,
+    20,
+    14,
+    4,
+    3,
+    84,
+    78,
+    2
+   ],
+   "top_pred": [
+    1.493222713470459,
+    1.3559365272521973,
+    1.34694242477417,
+    1.3329557180404663,
+    1.3156534433364868,
+    1.288562536239624,
+    1.286017656326294,
+    1.270862102508545,
+    1.2683824300765991,
+    1.2603243589401245
+   ],
+   "choice": 2,
+   "reason": "Generalized from network_design due to flow conservation and big-M constraints; vetoed 0 and 32 per class rules and selected the highest-ranked remaining candidate.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 7",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 1.701326847076416,
+     "times": [
+      1.701
+     ],
+     "status": "infeasible",
+     "nodes": 715,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false
+    },
+    "ours": {
+     "time": 29.27723240852356,
+     "times": [
+      29.277
+     ],
+     "status": "timelimit",
+     "nodes": 88974,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 1.012465476989746,
+     "times": [
+      1.012
+     ],
+     "status": "infeasible",
+     "nodes": 105,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 0.10179710388183594,
+     "times": [
+      0.102
+     ],
+     "status": "infeasible",
+     "nodes": 0,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.83058786392212,
+     "times": [
+      29.831
+     ],
+     "status": "timelimit",
+     "nodes": 68179,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    }
+   }
+  },
+  {
+   "name": "mik-250-20-75-4",
+   "features": [
+    195.0,
+    270.0,
+    9270.0,
+    0.17606837606837608,
+    0.2777777777777778,
+    0.6481481481481481,
+    0.07407407407407407,
+    20.0,
+    0.0,
+    1.0,
+    120.0,
+    0.0,
+    47.53846153846154,
+    34.333333333333336,
+    0.7831984771679262,
+    1.0,
+    1.2526444013061586,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 3,
+   "prompt_chars": 53776,
+   "top_ids": [
+    65,
+    98,
+    57,
+    55,
+    48,
+    3,
+    0,
+    25,
+    1,
+    12
+   ],
+   "top_pred": [
+    0.7913200259208679,
+    0.7545128464698792,
+    0.753636360168457,
+    0.7259489893913269,
+    0.7212103009223938,
+    0.6775206923484802,
+    0.67397540807724,
+    0.6701661348342896,
+    0.6698692440986633,
+    0.6677677035331726
+   ],
+   "choice": 4,
+   "reason": "Generalizing from knapsack and multidim_knapsack, the instance features RHS < 10000 and medium row density; config 55 provides a robust balance of presolve, cuts, and active primal heuristics, safely avoiding the severe optimality gap risks of configurations that disable feaspump/presolve (like 48, ",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 55",
+    "smac": "k=8 cluster 2",
+    "roar": "k=4 cluster 2",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.951740026474,
+     "times": [
+      29.952
+     ],
+     "status": "timelimit",
+     "nodes": 5363,
+     "objective": -52301.0,
+     "gap": 0.017770737368957273,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.968788623809814,
+     "times": [
+      29.969
+     ],
+     "status": "timelimit",
+     "nodes": 119199,
+     "objective": -52301.00000002744,
+     "gap": 0.016350422420778638,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "isacplus": {
+     "time": 28.379359006881714,
+     "times": [
+      28.379
+     ],
+     "status": "optimal",
+     "nodes": 9133,
+     "objective": -52301.0,
+     "gap": 0.0,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "smac": {
+     "time": 28.8227596282959,
+     "times": [
+      28.823
+     ],
+     "status": "optimal",
+     "nodes": 9133,
+     "objective": -52301.0,
+     "gap": 0.0,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "roar": {
+     "time": 29.711403846740723,
+     "times": [
+      29.711
+     ],
+     "status": "timelimit",
+     "nodes": 95958,
+     "objective": -52301.0,
+     "gap": 0.038354907171947,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "pg5_34",
+   "features": [
+    225.0,
+    2600.0,
+    7700.0,
+    0.013162393162393163,
+    0.038461538461538464,
+    0.0,
+    0.9615384615384616,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    34.22222222222222,
+    2.9615384615384617,
+    2.141558950937951,
+    1.0,
+    0.5000000000000002,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 54464,
+   "top_ids": [
+    0,
+    3,
+    50,
+    32,
+    23,
+    52,
+    91,
+    41,
+    83,
+    6
+   ],
+   "top_pred": [
+    1.520585060119629,
+    1.4490219354629517,
+    1.4313480854034424,
+    1.4131224155426025,
+    1.3858569860458374,
+    1.358371615409851,
+    1.3561577796936035,
+    1.33511483669281,
+    1.331346869468689,
+    1.3293263912200928
+   ],
+   "choice": 9,
+   "reason": "Generalizing from network_design due to the 96% continuous ratio, big-M linking constraints, and capacity rows, I avoid the known EPM Top-1 trap (0) and vetoed configs (32, 91) to select the prioritized stable fallback 83.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 83",
+    "smac": "k=8 cluster 5",
+    "roar": "k=4 cluster 1",
+    "isacplus": "member 7/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.927576541900635,
+     "times": [
+      29.928
+     ],
+     "status": "timelimit",
+     "nodes": 74,
+     "objective": -14287.702059831787,
+     "gap": 0.005486104855456283,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.97726798057556,
+     "times": [
+      29.977
+     ],
+     "status": "timelimit",
+     "nodes": 524,
+     "objective": -14309.948214078258,
+     "gap": 0.00865410072333275,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.97463321685791,
+     "times": [
+      29.975
+     ],
+     "status": "timelimit",
+     "nodes": 1095,
+     "objective": -14309.54361885608,
+     "gap": 0.025502169373273664,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.98022747039795,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 962,
+     "objective": -14319.688802778992,
+     "gap": 0.025088471020009565,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.974037408828735,
+     "times": [
+      29.974
+     ],
+     "status": "timelimit",
+     "nodes": 977,
+     "objective": -14298.827243169215,
+     "gap": 0.02288717192502478,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "50v-10",
+   "features": [
+    233.0,
+    2013.0,
+    2745.0,
+    0.005852516582130316,
+    0.7272727272727273,
+    0.09090909090909091,
+    0.18181818181818182,
+    366.0,
+    0.2145922746781116,
+    0.7854077253218884,
+    0.0,
+    0.0,
+    11.781115879828326,
+    1.3636363636363635,
+    1.4024034858734782,
+    0.8181818181818182,
+    2.61728882800296,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53703,
+   "top_ids": [
+    8,
+    4,
+    0,
+    3,
+    22,
+    42,
+    33,
+    32,
+    52,
+    40
+   ],
+   "top_pred": [
+    1.2579140663146973,
+    1.219964861869812,
+    1.1806135177612305,
+    1.1454644203186035,
+    1.0584012269973755,
+    1.0478214025497437,
+    1.0323227643966675,
+    1.031363606452942,
+    1.0218065977096558,
+    0.998525083065033
+   ],
+   "choice": 2,
+   "reason": "Generalizing from lot_sizing and network_design due to flow conservation and capacity/big-M inequalities, config 4 is a core high-yield choice while others like 0 and 32 face vetoes or degradation.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 7/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.974910736083984,
+     "times": [
+      29.975
+     ],
+     "status": "timelimit",
+     "nodes": 36,
+     "objective": 3854.1399886906142,
+     "gap": 0.19346730575545454,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.977864265441895,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 483,
+     "objective": 3601.899996742606,
+     "gap": 0.12245645990690648,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "isacplus": {
+     "time": 29.978008270263672,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 613,
+     "objective": 3607.579988241196,
+     "gap": 0.13328967868688257,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "smac": {
+     "time": 29.980674982070923,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 621,
+     "objective": 3607.579988241196,
+     "gap": 0.13328967868688257,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "roar": {
+     "time": 29.980331897735596,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 818,
+     "objective": 3704.839986801159,
+     "gap": 0.17100015715311448,
+     "has_solution": true,
+     "verdict": "better"
+    }
+   }
+  },
+  {
+   "name": "neos-2657525-crna",
+   "features": [
+    342.0,
+    524.0,
+    1690.0,
+    0.009430382572206597,
+    0.2786259541984733,
+    0.7213740458015268,
+    0.0,
+    0.0,
+    0.7426900584795322,
+    0.2573099415204678,
+    12.0,
+    0.0,
+    4.941520467836257,
+    3.2251908396946565,
+    2.2134417918792098,
+    0.061068702290076333,
+    1.1832159566199234,
+    3.0,
+    0.9961832061068703,
+    2.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 13,
+   "prompt_chars": 55754,
+   "top_ids": [
+    0,
+    80,
+    91,
+    93,
+    86,
+    43,
+    42,
+    66,
+    32,
+    47
+   ],
+   "top_pred": [
+    1.0654982328414917,
+    1.0067766904830933,
+    0.9146026968955994,
+    0.9097802042961121,
+    0.8850462436676025,
+    0.8706854581832886,
+    0.8532524704933167,
+    0.848404586315155,
+    0.833259642124176,
+    0.830334484577179
+   ],
+   "choice": 2,
+   "reason": "Generalizing from network_design (flow conservation, big-M) and set_covering (multi-component, wide matrix), I select 80 for its multi-component preference while vetoing configs that disable presolve/heuristics (93, 43, 47) or are blacklisted in network_design (0, 91, 66, 32).",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 80",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 0/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.98495125770569,
+     "times": [
+      29.985
+     ],
+     "status": "timelimit",
+     "nodes": 15750,
+     "objective": 13.7326482,
+     "gap": 1e+20,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.972374200820923,
+     "times": [
+      29.972
+     ],
+     "status": "timelimit",
+     "nodes": 22231,
+     "objective": 8.2809932,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 29.98118495941162,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 12678,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.981862545013428,
+     "times": [
+      29.982
+     ],
+     "status": "timelimit",
+     "nodes": 19200,
+     "objective": 8.9720517,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.982656955718994,
+     "times": [
+      29.983
+     ],
+     "status": "timelimit",
+     "nodes": 30599,
+     "objective": 8.2809932,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    }
+   }
+  },
+  {
+   "name": "csched007",
+   "features": [
+    351.0,
+    1758.0,
+    6379.0,
+    0.010337764035147426,
+    0.8287827076222981,
+    0.0,
+    0.17121729237770195,
+    0.0,
+    0.8575498575498576,
+    0.14245014245014245,
+    50.0,
+    0.0,
+    18.173789173789174,
+    3.6285551763367465,
+    1.904605351413624,
+    0.02844141069397042,
+    0.9999999999999999,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 5,
+   "prompt_chars": 53997,
+   "top_ids": [
+    32,
+    43,
+    0,
+    91,
+    22,
+    4,
+    92,
+    42,
+    7,
+    80
+   ],
+   "top_pred": [
+    1.1567659378051758,
+    1.1303966045379639,
+    1.0852779150009155,
+    1.058580994606018,
+    1.0401151180267334,
+    0.9780130982398987,
+    0.9560948014259338,
+    0.9482150673866272,
+    0.9431119561195374,
+    0.9386222958564758
+   ],
+   "choice": 10,
+   "reason": "Generalized from set_covering due to the presence of set partitioning rows over binaries and a wide matrix (col_count > 250), which strongly favors config 80.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 80",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.967870950698853,
+     "times": [
+      29.968
+     ],
+     "status": "timelimit",
+     "nodes": 298,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false
+    },
+    "ours": {
+     "time": 29.96367049217224,
+     "times": [
+      29.964
+     ],
+     "status": "timelimit",
+     "nodes": 594,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 29.975523948669434,
+     "times": [
+      29.976
+     ],
+     "status": "timelimit",
+     "nodes": 839,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.976582765579224,
+     "times": [
+      29.977
+     ],
+     "status": "timelimit",
+     "nodes": 680,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.971179962158203,
+     "times": [
+      29.971
+     ],
+     "status": "timelimit",
+     "nodes": 401,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "tie"
+    }
+   }
+  },
+  {
+   "name": "glass4",
+   "features": [
+    396.0,
+    322.0,
+    1815.0,
+    0.014233954451345756,
+    0.937888198757764,
+    0.0,
+    0.062111801242236024,
+    10.0,
+    0.09090909090909091,
+    0.9090909090909091,
+    36.0,
+    0.0,
+    4.583333333333333,
+    5.636645962732919,
+    2.0420239284659725,
+    0.059006211180124224,
+    0.316227766016838,
+    2.0,
+    0.9968944099378882,
+    1.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 53769,
+   "top_ids": [
+    4,
+    7,
+    86,
+    22,
+    0,
+    32,
+    42,
+    8,
+    91,
+    92
+   ],
+   "top_pred": [
+    1.0098142623901367,
+    0.9925416707992554,
+    0.9061425924301147,
+    0.9011722207069397,
+    0.8901415467262268,
+    0.8567548394203186,
+    0.8321694731712341,
+    0.8298940062522888,
+    0.7843537330627441,
+    0.7610517144203186
+   ],
+   "choice": 1,
+   "reason": "Generalizing from crew_scheduling and facility_location, the high matrix coefficient variation (>1.74) and small scale strongly support selecting the EPM Top-1 configuration 4.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 1/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.97835373878479,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 407,
+     "objective": 2050019200.0,
+     "gap": 1.5625073155268014,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.98787569999695,
+     "times": [
+      29.988
+     ],
+     "status": "timelimit",
+     "nodes": 942,
+     "objective": 2000017825.0,
+     "gap": 1.5000069299186287,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 29.981183290481567,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 30791,
+     "objective": 1700016000.0,
+     "gap": 1.125012296830424,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "smac": {
+     "time": 29.979488849639893,
+     "times": [
+      29.979
+     ],
+     "status": "timelimit",
+     "nodes": 3181,
+     "objective": 1783350198.336845,
+     "gap": 1.2291733559169928,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "roar": {
+     "time": 29.985592365264893,
+     "times": [
+      29.986
+     ],
+     "status": "timelimit",
+     "nodes": 20,
+     "objective": 1911129177.7777781,
+     "gap": 1.388897411576298,
+     "has_solution": true,
+     "verdict": "better"
+    }
+   }
+  },
+  {
+   "name": "neos-3754480-nidda",
+   "features": [
+    402.0,
+    253.0,
+    1488.0,
+    0.014630405285823845,
+    0.1976284584980237,
+    0.0,
+    0.8023715415019763,
+    203.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    3.701492537313433,
+    5.881422924901186,
+    2.4463866697295953,
+    1.0,
+    1.004987562112089,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 6,
+   "prompt_chars": 54678,
+   "top_ids": [
+    0,
+    7,
+    61,
+    4,
+    8,
+    50,
+    23,
+    32,
+    3,
+    6
+   ],
+   "top_pred": [
+    1.485588550567627,
+    1.3385930061340332,
+    1.3326776027679443,
+    1.3170700073242188,
+    1.2727571725845337,
+    1.2629165649414062,
+    1.237085223197937,
+    1.2159929275512695,
+    1.2065140008926392,
+    1.2042157649993896
+   ],
+   "choice": 3,
+   "reason": "The instance features big-M constraints linking binary and continuous variables alongside flow-conservation-like continuous rows, strongly resembling network_design, where config 61 is the undisputed top choice and config 0 is explicitly vetoed.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 61",
+    "smac": "k=8 cluster 5",
+    "roar": "k=4 cluster 1",
+    "isacplus": "member 0/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.98788046836853,
+     "times": [
+      29.988
+     ],
+     "status": "timelimit",
+     "nodes": 61490,
+     "objective": 13848.45125745675,
+     "gap": 1e+20,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.978025913238525,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 65644,
+     "objective": 13410.589917764877,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "isacplus": {
+     "time": 29.970428943634033,
+     "times": [
+      29.97
+     ],
+     "status": "timelimit",
+     "nodes": 37095,
+     "objective": 13684.534317886822,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.980196475982666,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 53182,
+     "objective": 13848.4512031969,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "roar": {
+     "time": 29.97297239303589,
+     "times": [
+      29.973
+     ],
+     "status": "timelimit",
+     "nodes": 60834,
+     "objective": 13616.295323104985,
+     "gap": 1e+20,
+     "has_solution": true,
+     "verdict": "tie"
+    }
+   }
+  },
+  {
+   "name": "ran14x18-disj-8",
+   "features": [
+    447.0,
+    504.0,
+    10277.0,
+    0.04561716558360854,
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    0.07158836689038031,
+    0.9284116331096197,
+    85.0,
+    0.0,
+    22.991051454138702,
+    20.390873015873016,
+    2.81474676774131,
+    1.0,
+    0.2776840538002494,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 8,
+   "prompt_chars": 55003,
+   "top_ids": [
+    43,
+    3,
+    21,
+    61,
+    32,
+    8,
+    42,
+    12,
+    0,
+    23
+   ],
+   "top_pred": [
+    1.1724025011062622,
+    1.1364766359329224,
+    1.1292541027069092,
+    1.1073617935180664,
+    1.1044137477874756,
+    1.1016066074371338,
+    1.0704476833343506,
+    1.070387601852417,
+    1.0700706243515015,
+    1.0588924884796143
+   ],
+   "choice": 2,
+   "reason": "Generalizing from facility_location and set_covering (wide matrix), config 3 is a robust fallback that keeps presolve and heavy primal heuristics enabled, avoiding the severe gap risks of configs that disable presolve (like 61, 12, 23) or heuristics.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 3",
+    "smac": "k=8 cluster 5",
+    "roar": "k=4 cluster 1",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.96106457710266,
+     "times": [
+      29.961
+     ],
+     "status": "timelimit",
+     "nodes": 421,
+     "objective": 3983.00000006897,
+     "gap": 0.14294111524236355,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.93545413017273,
+     "times": [
+      29.935
+     ],
+     "status": "timelimit",
+     "nodes": 470,
+     "objective": 3860.9999999994,
+     "gap": 0.10596823334754935,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "isacplus": {
+     "time": 29.975327014923096,
+     "times": [
+      29.975
+     ],
+     "status": "timelimit",
+     "nodes": 286,
+     "objective": 3870.9999999999145,
+     "gap": 0.12043545001320521,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "smac": {
+     "time": 29.97413969039917,
+     "times": [
+      29.974
+     ],
+     "status": "timelimit",
+     "nodes": 217,
+     "objective": 3734.999996122445,
+     "gap": 0.07404823697880393,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "roar": {
+     "time": 29.98099708557129,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 7051,
+     "objective": 3832.0000000125124,
+     "gap": 0.10110480390216159,
+     "has_solution": true,
+     "verdict": "better"
+    }
+   }
+  },
+  {
+   "name": "sp150x300d",
+   "features": [
+    450.0,
+    600.0,
+    1200.0,
+    0.0044444444444444444,
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    0.3333333333333333,
+    0.6666666666666666,
+    1.0,
+    0.0,
+    2.6666666666666665,
+    2.0,
+    1.729780754085825,
+    0.5,
+    2.962709105096537,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 54150,
+   "top_ids": [
+    4,
+    8,
+    9,
+    97,
+    21,
+    52,
+    24,
+    43,
+    53,
+    19
+   ],
+   "top_pred": [
+    1.5632483959197998,
+    1.5537772178649902,
+    1.3567214012145996,
+    1.344836950302124,
+    1.3435672521591187,
+    1.334687352180481,
+    1.3322322368621826,
+    1.314448356628418,
+    1.302714228630066,
+    1.2969980239868164
+   ],
+   "choice": 1,
+   "reason": "The instance's big-M and flow conservation constraints resemble facility_location and network_design, making Candidate 1 the safest and most effective choice due to its full presolve, clique cuts, feaspump, and binary branching preference, while explicitly avoiding candidates that dangerously disabl",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 1/8"
+   },
+   "arms": {
+    "default": {
+     "time": 0.49303150177001953,
+     "times": [
+      0.493
+     ],
+     "status": "optimal",
+     "nodes": 47,
+     "objective": 69.0,
+     "gap": 0.0,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.47574281692505,
+     "times": [
+      29.476
+     ],
+     "status": "timelimit",
+     "nodes": 5291,
+     "objective": 69.0,
+     "gap": 0.06606071978101966,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.97613763809204,
+     "times": [
+      29.976
+     ],
+     "status": "timelimit",
+     "nodes": 77116,
+     "objective": 69.0,
+     "gap": 0.6416008614501078,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.90679907798767,
+     "times": [
+      29.907
+     ],
+     "status": "timelimit",
+     "nodes": 7757,
+     "objective": 69.0,
+     "gap": 0.111802896760295,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.981743812561035,
+     "times": [
+      29.982
+     ],
+     "status": "timelimit",
+     "nodes": 8932,
+     "objective": 69.0,
+     "gap": 0.09164310498052984,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "neos-3381206-awhea",
+   "features": [
+    479.0,
+    2375.0,
+    4275.0,
+    0.0037578288100208767,
+    0.2,
+    0.8,
+    0.0,
+    0.0,
+    0.008350730688935281,
+    0.9916492693110647,
+    4.0,
+    0.0,
+    8.924843423799583,
+    1.8,
+    1.2098993068446702,
+    0.2,
+    0.5920303387347272,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53636,
+   "top_ids": [
+    8,
+    4,
+    7,
+    50,
+    23,
+    86,
+    3,
+    60,
+    78,
+    32
+   ],
+   "top_pred": [
+    1.2808698415756226,
+    1.240688681602478,
+    1.2301244735717773,
+    1.22443687915802,
+    1.1843863725662231,
+    1.176792860031128,
+    1.1696748733520508,
+    1.157086968421936,
+    1.150346279144287,
+    1.1470561027526855
+   ],
+   "choice": 1,
+   "reason": "The instance's big-M inequalities linking binaries to integers and cardinality equalities resemble facility_location and assignment; as EPM Top-1, config 8 enjoys absolute trust in assignment and faces no vetoes here, while configs disabling presolve or feaspump (like 23, 78) or root cuts (like 7) a",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 8",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 3.412208080291748,
+     "times": [
+      3.412
+     ],
+     "status": "optimal",
+     "nodes": 202,
+     "objective": 453.00000000000006,
+     "gap": 0.0,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.532379150390625,
+     "times": [
+      29.532
+     ],
+     "status": "timelimit",
+     "nodes": 165,
+     "objective": 458.0,
+     "gap": 0.1029229820056987,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.97755742073059,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 392,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.97792410850525,
+     "times": [
+      29.978
+     ],
+     "status": "timelimit",
+     "nodes": 177,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.983688831329346,
+     "times": [
+      29.984
+     ],
+     "status": "timelimit",
+     "nodes": 424,
+     "objective": Infinity,
+     "gap": null,
+     "has_solution": false,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "exp-1-500-5-5",
+   "features": [
+    550.0,
+    990.0,
+    1980.0,
+    0.0036363636363636364,
+    0.25252525252525254,
+    0.0,
+    0.7474747474747475,
+    0.0,
+    0.45454545454545453,
+    0.5454545454545454,
+    50.0,
+    0.0,
+    3.6,
+    2.0,
+    2.6101432847774557,
+    1.0,
+    0.728761772399475,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 3,
+   "prompt_chars": 53615,
+   "top_ids": [
+    61,
+    34,
+    0,
+    10,
+    8,
+    19,
+    23,
+    4,
+    43,
+    32
+   ],
+   "top_pred": [
+    1.7492631673812866,
+    1.6765570640563965,
+    1.6505857706069946,
+    1.6490216255187988,
+    1.6270384788513184,
+    1.6049375534057617,
+    1.59519362449646,
+    1.5721099376678467,
+    1.567218542098999,
+    1.5646926164627075
+   ],
+   "choice": 8,
+   "reason": "The instance's big-M, flow conservation, and set packing structures resemble network_design and facility_location; generalizing at the parameter level, Candidate 8 (Config 4) uniquely provides full presolve, clique cuts, prefer-binary branching, and active heuristics, safely avoiding the huge gap ri",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 5",
+    "roar": "k=4 cluster 1",
+    "isacplus": "member 1/8"
+   },
+   "arms": {
+    "default": {
+     "time": 3.8594791889190674,
+     "times": [
+      3.859
+     ],
+     "status": "optimal",
+     "nodes": 1,
+     "objective": 65887.00000000001,
+     "gap": 0.0,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 8.45206356048584,
+     "times": [
+      8.452
+     ],
+     "status": "optimal",
+     "nodes": 106,
+     "objective": 65887.0,
+     "gap": 0.0,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.515843629837036,
+     "times": [
+      29.516
+     ],
+     "status": "timelimit",
+     "nodes": 44673,
+     "objective": 71520.0,
+     "gap": 0.8566058456859563,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.95582628250122,
+     "times": [
+      29.956
+     ],
+     "status": "timelimit",
+     "nodes": 1661,
+     "objective": 65886.99999999997,
+     "gap": 0.10548547322710732,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.982144117355347,
+     "times": [
+      29.982
+     ],
+     "status": "timelimit",
+     "nodes": 12847,
+     "objective": 73564.0,
+     "gap": 0.40814467490499584,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "tr12-30",
+   "features": [
+    750.0,
+    1080.0,
+    2508.0,
+    0.003096296296296296,
+    0.3333333333333333,
+    0.0,
+    0.6666666666666666,
+    720.0,
+    0.48,
+    0.52,
+    0.0,
+    0.0,
+    3.344,
+    2.3222222222222224,
+    2.379041533076752,
+    0.6666666666666666,
+    1.7974267569689448,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 53882,
+   "top_ids": [
+    4,
+    34,
+    61,
+    0,
+    7,
+    8,
+    32,
+    43,
+    26,
+    21
+   ],
+   "top_pred": [
+    1.3996624946594238,
+    1.3020527362823486,
+    1.2511366605758667,
+    1.2349189519882202,
+    1.2120367288589478,
+    1.2015880346298218,
+    1.1745140552520752,
+    1.1687335968017578,
+    1.1531219482421875,
+    1.1184765100479126
+   ],
+   "choice": 3,
+   "reason": "The instance features big-M bounds linking binaries to continuous variables and flow conservation rows, strongly resembling network_design, where config 61 (Candidate 3) is the undisputed top choice.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 61",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 0/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.973187923431396,
+     "times": [
+      29.973
+     ],
+     "status": "timelimit",
+     "nodes": 2175,
+     "objective": 130667.0,
+     "gap": 0.002392037185710031,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.98425602912903,
+     "times": [
+      29.984
+     ],
+     "status": "timelimit",
+     "nodes": 1587,
+     "objective": 131799.0,
+     "gap": 0.015650566006637924,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.98567295074463,
+     "times": [
+      29.986
+     ],
+     "status": "timelimit",
+     "nodes": 1,
+     "objective": 132799.0,
+     "gap": 0.02969861520090687,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.984943628311157,
+     "times": [
+      29.985
+     ],
+     "status": "timelimit",
+     "nodes": 1977,
+     "objective": 132861.0,
+     "gap": 0.0489843116076421,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.987152338027954,
+     "times": [
+      29.987
+     ],
+     "status": "timelimit",
+     "nodes": 5249,
+     "objective": 133377.0,
+     "gap": 0.05926811885226556,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "graphdraw-domain",
+   "features": [
+    865.0,
+    254.0,
+    2600.0,
+    0.011833780892995312,
+    0.7086614173228346,
+    0.07874015748031496,
+    0.2125984251968504,
+    20.0,
+    0.05202312138728324,
+    0.9479768786127167,
+    543.0,
+    0.0,
+    3.005780346820809,
+    10.236220472440944,
+    2.7165981450261567,
+    0.2125984251968504,
+    1.2426253043692712,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 8,
+   "prompt_chars": 55287,
+   "top_ids": [
+    4,
+    61,
+    8,
+    36,
+    2,
+    0,
+    43,
+    22,
+    50,
+    89
+   ],
+   "top_pred": [
+    1.3576284646987915,
+    1.2545647621154785,
+    1.214673399925232,
+    1.2121063470840454,
+    1.210253119468689,
+    1.2006115913391113,
+    1.1637953519821167,
+    1.1502858400344849,
+    1.0962978601455688,
+    1.0846915245056152
+   ],
+   "choice": 1,
+   "reason": "Generalizing from crew_scheduling and set_covering, the high matrix_coeff_cv (>1.74) and tall matrix structure strongly favor config 4 or 8, making EPM Top-1 config 4 the optimal and safest choice.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 6/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.971960306167603,
+     "times": [
+      29.972
+     ],
+     "status": "timelimit",
+     "nodes": 8484,
+     "objective": 19772.0,
+     "gap": 0.4765988110305269,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.976361989974976,
+     "times": [
+      29.976
+     ],
+     "status": "timelimit",
+     "nodes": 34034,
+     "objective": 21560.999999999996,
+     "gap": 0.5890935013669819,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.97956943511963,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 38279,
+     "objective": 20632.000000000004,
+     "gap": 0.4998037379255949,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.980737686157227,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 25412,
+     "objective": 20874.0,
+     "gap": 0.5219883030702253,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.98036289215088,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 21684,
+     "objective": 22173.0,
+     "gap": 0.627436289564584,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "supportcase26",
+   "features": [
+    870.0,
+    436.0,
+    2492.0,
+    0.006569650954339344,
+    0.908256880733945,
+    0.0,
+    0.09174311926605505,
+    40.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    2.864367816091954,
+    5.715596330275229,
+    1.4646209044412033,
+    0.09174311926605505,
+    0.0,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 3,
+   "prompt_chars": 54026,
+   "top_ids": [
+    4,
+    7,
+    20,
+    0,
+    32,
+    3,
+    6,
+    22,
+    77,
+    42
+   ],
+   "top_pred": [
+    0.8653567433357239,
+    0.8306763172149658,
+    0.821807324886322,
+    0.8139461278915405,
+    0.7799742817878723,
+    0.7788893580436707,
+    0.7421935796737671,
+    0.704771101474762,
+    0.6939793229103088,
+    0.6862698793411255
+   ],
+   "choice": 1,
+   "reason": "Generalized from facility_location due to big-M constraints linking binary and continuous variables; with the small-scale specialist (11) absent, the rules dictate trusting the EPM Top-1 (Candidate 1) and vetoing configurations that disable essential primal heuristics.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.96828055381775,
+     "times": [
+      29.968
+     ],
+     "status": "timelimit",
+     "nodes": 510,
+     "objective": 1840.4496768677943,
+     "gap": 0.2737511195258953,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.981305837631226,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 417,
+     "objective": 1857.3913257465897,
+     "gap": 0.29443791751115006,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.978551864624023,
+     "times": [
+      29.979
+     ],
+     "status": "timelimit",
+     "nodes": 345,
+     "objective": 1882.911789380143,
+     "gap": 0.3471503480295291,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.967897653579712,
+     "times": [
+      29.968
+     ],
+     "status": "timelimit",
+     "nodes": 667,
+     "objective": 1878.6655781289132,
+     "gap": 0.3399974701026084,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.98697781562805,
+     "times": [
+      29.987
+     ],
+     "status": "timelimit",
+     "nodes": 449,
+     "objective": 1857.3913257465886,
+     "gap": 0.3390687619652788,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "ic97_potential",
+   "features": [
+    1046.0,
+    728.0,
+    3138.0,
+    0.004120879120879121,
+    0.6181318681318682,
+    0.10027472527472528,
+    0.2815934065934066,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    3.0,
+    4.31043956043956,
+    1.345783873871171,
+    0.38461538461538464,
+    0.9990435196280982,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 53827,
+   "top_ids": [
+    4,
+    6,
+    7,
+    0,
+    20,
+    3,
+    61,
+    8,
+    32,
+    36
+   ],
+   "top_pred": [
+    0.9970820546150208,
+    0.9557640552520752,
+    0.9502462148666382,
+    0.8782392144203186,
+    0.8372044563293457,
+    0.8157783150672913,
+    0.7873719930648804,
+    0.7691856622695923,
+    0.75577312707901,
+    0.7529943585395813
+   ],
+   "choice": 1,
+   "reason": "The instance features Big-M constraints linking binary and continuous variables resembling facility_location and network_design, making full presolve and strong heuristics critical; Candidate 1 (ID 4) provides this, while Candidate 7 (ID 61) is vetoed for disabling presolve and Candidate 10 (ID 36) ",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 1/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.948501110076904,
+     "times": [
+      29.949
+     ],
+     "status": "timelimit",
+     "nodes": 1129,
+     "objective": 3968.0,
+     "gap": 0.01552092910563311,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.98005485534668,
+     "times": [
+      29.98
+     ],
+     "status": "timelimit",
+     "nodes": 533,
+     "objective": 4077.0,
+     "gap": 0.052400619514713476,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.980995893478394,
+     "times": [
+      29.981
+     ],
+     "status": "timelimit",
+     "nodes": 12200,
+     "objective": 3956.0,
+     "gap": 0.021430415698424993,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.97944688796997,
+     "times": [
+      29.979
+     ],
+     "status": "timelimit",
+     "nodes": 2026,
+     "objective": 4031.0,
+     "gap": 0.04106404958677661,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.982633113861084,
+     "times": [
+      29.983
+     ],
+     "status": "timelimit",
+     "nodes": 941,
+     "objective": 4028.0,
+     "gap": 0.04082687338501292,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "neos-4954672-berkel",
+   "features": [
+    1848.0,
+    1533.0,
+    8007.0,
+    0.0028263484721410357,
+    0.410958904109589,
+    0.0,
+    0.589041095890411,
+    903.0,
+    0.2840909090909091,
+    0.7159090909090909,
+    45.0,
+    0.0,
+    4.332792207792208,
+    5.223091976516634,
+    2.3854190901557457,
+    0.1643835616438356,
+    1.3762608312254683,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 6,
+   "prompt_chars": 54562,
+   "top_ids": [
+    4,
+    14,
+    34,
+    0,
+    7,
+    61,
+    8,
+    32,
+    42,
+    86
+   ],
+   "top_pred": [
+    1.4118266105651855,
+    1.1074546575546265,
+    1.075313925743103,
+    1.0379120111465454,
+    1.0377827882766724,
+    1.033453345298767,
+    1.0291504859924316,
+    0.9840843081474304,
+    0.9802265167236328,
+    0.9633598923683167
+   ],
+   "choice": 6,
+   "reason": "The instance features big-M constraints linking binaries to continuous variables alongside flow conservation equalities, strongly resembling network_design, for which config 61 is the absolute dominant choice when available, while configs 0, 32, and 42 are explicitly vetoed by the experience.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 61",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 5/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.972544193267822,
+     "times": [
+      29.973
+     ],
+     "status": "timelimit",
+     "nodes": 75,
+     "objective": 3138479.0,
+     "gap": 0.4315429389766893,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.973485231399536,
+     "times": [
+      29.973
+     ],
+     "status": "timelimit",
+     "nodes": 581,
+     "objective": 2744655.0,
+     "gap": 0.4982398281868655,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.971698760986328,
+     "times": [
+      29.972
+     ],
+     "status": "timelimit",
+     "nodes": 151,
+     "objective": 2959427.0,
+     "gap": 0.7093432566970669,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.97630000114441,
+     "times": [
+      29.976
+     ],
+     "status": "timelimit",
+     "nodes": 308,
+     "objective": 2787918.0,
+     "gap": 0.5318254036046708,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.972124576568604,
+     "times": [
+      29.972
+     ],
+     "status": "timelimit",
+     "nodes": 341,
+     "objective": 3010430.0,
+     "gap": 0.8916089335062463,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "reblock115",
+   "features": [
+    4735.0,
+    1150.0,
+    13724.0,
+    0.002520361783205546,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    2.898416050686378,
+    11.933913043478261,
+    1.9138066621162917,
+    1.0,
+    0.043478260869565216,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 3,
+   "prompt_chars": 54162,
+   "top_ids": [
+    4,
+    67,
+    21,
+    8,
+    32,
+    14,
+    7,
+    50,
+    86,
+    88
+   ],
+   "top_pred": [
+    0.80196213722229,
+    0.6579499840736389,
+    0.6027904748916626,
+    0.5883303284645081,
+    0.5646350979804993,
+    0.5419244766235352,
+    0.5392083525657654,
+    0.5049792528152466,
+    0.5006944537162781,
+    0.487910658121109
+   ],
+   "choice": 1,
+   "reason": "The instance's high matrix_coeff_cv (1.91) and binary precedence/knapsack structure generalize to crew_scheduling, where configurations 4 and 8 are dominant core choices for high CV; as EPM Top-1, 4 is the optimal and safest selection.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 1",
+    "roar": "k=4 cluster 1",
+    "isacplus": "member 0/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.966999292373657,
+     "times": [
+      29.967
+     ],
+     "status": "timelimit",
+     "nodes": 1,
+     "objective": -26806285.426109463,
+     "gap": 0.4314202546070161,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.88531494140625,
+     "times": [
+      29.885
+     ],
+     "status": "timelimit",
+     "nodes": 407,
+     "objective": -29997250.076436047,
+     "gap": 0.2725307124663485,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "isacplus": {
+     "time": 29.95777654647827,
+     "times": [
+      29.958
+     ],
+     "status": "timelimit",
+     "nodes": 30,
+     "objective": -25555085.860051878,
+     "gap": 0.4874366980671789,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 29.96299648284912,
+     "times": [
+      29.963
+     ],
+     "status": "timelimit",
+     "nodes": 109,
+     "objective": -34568188.00581908,
+     "gap": 0.08846465108466761,
+     "has_solution": true,
+     "verdict": "better"
+    },
+    "roar": {
+     "time": 29.9514262676239,
+     "times": [
+      29.951
+     ],
+     "status": "timelimit",
+     "nodes": 3,
+     "objective": -25555085.860051867,
+     "gap": 0.49706610033029736,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  },
+  {
+   "name": "fastxgemm-n2r6s0t2",
+   "features": [
+    5998.0,
+    784.0,
+    19376.0,
+    0.0041204210927452,
+    0.061224489795918366,
+    0.0,
+    0.9387755102040817,
+    0.0,
+    0.02400800266755585,
+    0.9759919973324441,
+    62.0,
+    0.0,
+    3.2304101367122375,
+    24.714285714285715,
+    0.0,
+    0.2653061224489796,
+    0.9855019114755194,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 4,
+   "prompt_chars": 54074,
+   "top_ids": [
+    0,
+    2,
+    76,
+    6,
+    20,
+    34,
+    95,
+    7,
+    86,
+    89
+   ],
+   "top_pred": [
+    0.7106064558029175,
+    0.6900261044502258,
+    0.669156551361084,
+    0.6291710734367371,
+    0.6209971904754639,
+    0.5920878648757935,
+    0.578750729560852,
+    0.5763140320777893,
+    0.564127504825592,
+    0.5551367402076721
+   ],
+   "choice": 6,
+   "reason": "Generalized from network_design due to the high continuous ratio and grid-like absolute value/flow constraints; vetoed EPM Top-1 (config 0) per network_design rules and selected config 34 as the explicit class fallback.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 34",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 1/8"
+   },
+   "arms": {
+    "default": {
+     "time": 29.918869733810425,
+     "times": [
+      29.919
+     ],
+     "status": "timelimit",
+     "nodes": 610,
+     "objective": 526.9999999999997,
+     "gap": 18.518518518518494,
+     "has_solution": true
+    },
+    "ours": {
+     "time": 29.94207215309143,
+     "times": [
+      29.942
+     ],
+     "status": "timelimit",
+     "nodes": 417,
+     "objective": 827.0,
+     "gap": 29.62962962962962,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 29.934189796447754,
+     "times": [
+      29.934
+     ],
+     "status": "timelimit",
+     "nodes": 646,
+     "objective": 527.0,
+     "gap": 18.51851851851852,
+     "has_solution": true,
+     "verdict": "tie"
+    },
+    "smac": {
+     "time": 29.92220377922058,
+     "times": [
+      29.922
+     ],
+     "status": "timelimit",
+     "nodes": 338,
+     "objective": 836.0,
+     "gap": 29.96296296296296,
+     "has_solution": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 29.90671420097351,
+     "times": [
+      29.907
+     ],
+     "status": "timelimit",
+     "nodes": 267,
+     "objective": 854.0,
+     "gap": 30.629629629629623,
+     "has_solution": true,
+     "verdict": "worse"
+    }
+   }
+  }
+ ]
+}

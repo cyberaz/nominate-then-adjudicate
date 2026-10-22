@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "names_file": "data/results/miplib_cands16.json",
+  "cache": "data/results/training_cache_multi.json",
+  "pool": "config_100.json",
+  "skill": "skills/skill_multi16.md",
+  "top_k": 10,
+  "time_limit": 600.0,
+  "target_gap": 0.001,
+  "repeats": 1,
+  "id_convention": "pool position",
+  "at": "2026-08-14 15:13:39"
+ },
+ "results": [
+  {
+   "name": "mas76",
+   "features": [
+    12.0,
+    151.0,
+    1640.0,
+    0.9050772626931567,
+    0.9933774834437086,
+    0.0,
+    0.006622516556291391,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    136.66666666666666,
+    10.860927152317881,
+    0.6187845159117408,
+    1.0,
+    0.3015113445777636,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53709,
+   "top_ids": [
+    0,
+    48,
+    1,
+    65,
+    81,
+    52,
+    75,
+    33,
+    42,
+    23
+   ],
+   "top_pred": [
+    1.2574973106384277,
+    1.2250645160675049,
+    1.222071886062622,
+    1.2048182487487793,
+    1.1645944118499756,
+    1.1459728479385376,
+    1.1212913990020752,
+    1.1172640323638916,
+    1.096944808959961,
+    1.0823994874954224
+   ],
+   "choice": 2,
+   "reason": "Generalized from multidim_knapsack due to the dense binary matrix with medium coefficient CV and >=10 rows, selecting 48 as the most stable fallback and vetoing 33.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 48",
+    "smac": "k=8 cluster 2",
+    "roar": "k=4 cluster 2",
+    "isacplus": "member 2/8"
+   },
+   "arms": {
+    "default": {
+     "time": 172.00892663002014,
+     "times": [
+      172.009
+     ],
+     "status": "optimal",
+     "nodes": 206431,
+     "objective": 40005.05414199999,
+     "gap": 0.0,
+     "has_solution": true,
+     "reached_target": true,
+     "censored": false
+    },
+    "ours": {
+     "time": 87.18495488166809,
+     "times": [
+      87.185
+     ],
+     "status": "gaplimit",
+     "nodes": 596361,
+     "objective": 40005.0246843302,
+     "gap": 0.0009840015259472584,
+     "has_solution": true,
+     "reached_target": true,
+     "censored": false,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 428.567134141922,
+     "times": [
+      428.567
+     ],
+     "status": "gaplimit",
+     "nodes": 241830,
+     "objective": 40005.054142,
+     "gap": 0.00041760779124067944,
+     "has_solution": true,
+     "reached_target": true,
+     "censored": false,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 363.8363859653473,
+     "times": [
+      363.836
+     ],
+     "status": "gaplimit",
+     "nodes": 241830,
+     "objective": 40005.054142,
+     "gap": 0.00041760779124067944,
+     "has_solution": true,
+     "reached_target": true,
+     "censored": false,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 123.17661118507385,
+     "times": [
+      123.177
+     ],
+     "status": "optimal",
+     "nodes": 164200,
+     "objective": 40005.054141999986,
+     "gap": 0.0,
+     "has_solution": true,
+     "reached_target": true,
+     "censored": false,
+     "verdict": "better"
+    }
+   }
+  }
+ ]
+}

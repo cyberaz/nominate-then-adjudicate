@@ -1,0 +1,188 @@
+# 实验配置文件
+# 多参数随机搜索 + XGBoost 调优模型
+
+# LLM API 配置
+llm:
+  provider: "openai"          # DashScope OpenAI-compatible endpoint
+  model: "qwen3.7-max"
+  temperature: 0.1
+  max_tokens: 4096
+
+# SCIP Solver 配置
+solver:
+  max_workers: 8              # 最大并行工作线程数
+  time_limit: 10              # 默认求解时间限制（秒）
+  memory_limit: 8192          # 内存限制（MB）
+  gap_tolerance: 0.01         # 最优性间隙容差
+
+# 实例接受窗口：预生成时用默认配置求解，只保留默认求解时间落在
+# [min_solve_time, max_solve_time] 的实例；否则用派生种子反复重采样，
+# 最多 max_resample_attempts 次。若始终不落窗口，保留最快的候选（避免 bin_packing 式超时）。
+instances:
+  min_solve_time: 0.5
+  max_solve_time: 5.0
+  max_resample_attempts: 60
+
+# Phase 1: LLM Skill Accumulation
+# 目标：通过随机配置搜索积累经验到 skill.md
+skill:
+  n_instances: 10              # 每个问题族的实例数
+  seed_offset: 200              # 随机种子偏移
+  variants: ['small']         # 问题规模变体
+  n_random_configs: 20        # 每个实例生成的随机配置数
+
+  # 问题族配置（全部 16 类）
+  families:
+    - set_covering
+    - facility_location
+    - knapsack
+    - bin_packing
+    - independent_set
+    - graph_coloring
+    - vertex_cover
+    - multidim_knapsack
+    - job_scheduling
+    - network_design
+    - lot_sizing
+    - assignment
+    - tsp
+    - crew_scheduling
+    - cutting_stock
+    - combinatorial_auction
+
+# Phase 2: XGBoost Training
+# 目标：随机配置搜索 → LLM推荐30维方向 → 训练XGBoost多参数预测
+training:
+  n_instances: 25              # 每个问题族的训练实例数
+  seed_offset: 5              # 随机种子偏移 (与Phase1不重叠)
+  variants: ['small']         # 问题规模变体
+  time_limit: 10              # 求解时间限制（秒）
+  n_random_configs: 20        # 每个实例生成的随机配置数
+  model_save_path: models/xgb_model_multi  # XGBoost模型保存路径（多参数版本）
+
+  # 问题族配置（全部 16 类）
+  families:
+    - set_covering
+    - facility_location
+    - knapsack
+    - bin_packing
+    - independent_set
+    - graph_coloring
+    - vertex_cover
+    - multidim_knapsack
+    - job_scheduling
+    - network_design
+    - lot_sizing
+    - assignment
+    - tsp
+    - crew_scheduling
+    - cutting_stock
+    - combinatorial_auction
+
+  # XGBoost 参数
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 0.1
+    reg_lambda: 1.0
+
+# Evaluation
+# 目标：评估训练好的模型
+evaluation:
+  n_test_instances: 10         # 每个问题族的测试实例数
+  seed_offset: 2700             # 种子偏移 (与训练集不重叠)
+  time_limit: 10              # 求解时间限制（秒）
+  variants: ['small']         # 问题规模变体
+
+  # 问题族配置（全部 16 类）
+  families:
+    - set_covering
+    - facility_location
+    - knapsack
+    - bin_packing
+    - independent_set
+    - graph_coloring
+    - vertex_cover
+    - multidim_knapsack
+    - job_scheduling
+    - network_design
+    - lot_sizing
+    - assignment
+    - tsp
+    - crew_scheduling
+    - cutting_stock
+    - combinatorial_auction
+
+  # 评估指标
+  metrics:
+    - win_rate                # 胜率
+    - avg_time_reduction      # 平均时间减少
+    - max_time_reduction      # 最大时间减少
+
+# 并行化配置
+parallel:
+  max_workers: 8              # 最大工作线程数
+  batch_size: 5               # 批处理大小
+  use_threading: true         # 是否使用多线程
+
+# 路径配置
+paths:
+  # 参数配置
+  param_config: config/param_config.json  # SCIP参数配置文件
+
+  # 数据路径
+  data_dir: data
+  training_data: data/training_data.json
+  evaluation_data: data/evaluation_data.json
+
+  # 模型路径
+  model_dir: models
+  xgb_model: models/xgb_model_multi
+
+  # 经验文件
+  skill_dir: skills
+  skill_file: skills/skill.md
+  skill_backup: skills/skill_backup.md
+
+  # 日志路径
+  log_dir: logs
+  experiment_log: logs/experiment.log
+
+  # 结果路径
+  results_dir: data/results
+  phase1_results: results/phase1_results.json
+  phase2_results: results/phase2_results.json
+  evaluation_results: results/evaluation_results.json
+
+# 日志配置
+logging:
+  level: INFO                 # 日志级别：DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  console_output: true        # 是否输出到控制台
+  file_output: true           # 是否输出到文件
+
+# 实验元数据
+metadata:
+  experiment_name: "Multi-Parameter Random Search Tuning"
+  description: "多参数随机搜索 + XGBoost 调优模型"
+  version: "4.0"
+  created_at: "2026-07-15"
+
+  # 实验标签
+  tags:
+    - multi_param
+    - random_search
+    - llm_skill
+    - xgboost
+
+  # 实验说明
+  notes: |
+    本次实验采用多参数随机搜索 + XGBoost调优策略：
+    - Phase 1: 每个实例生成20组随机配置（30维参数独立均匀采样），求解后全部喂给LLM总结经验（含正负样例）
+    - Phase 2: 随机搜索 → LLM推荐30维方向向量 → 训练30个XGBoost分类器（50维输入：20特征+30方向）
+    - 评估: LLM推荐30维方向 → XGBoost预测全部30个参数值 → 求解对比
+
+    种子分配: Phase1=0-4, Phase2=5-9, Eval=10-14

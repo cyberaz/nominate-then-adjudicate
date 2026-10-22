@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "names_file": "data/results/miplib_cands16.json",
+  "cache": "data/results/training_cache_multi.json",
+  "pool": "config_100.json",
+  "skill": "skills/skill_multi16.md",
+  "top_k": 10,
+  "time_limit": 600.0,
+  "target_gap": 0.03,
+  "repeats": 1,
+  "id_convention": "pool position",
+  "at": "2026-08-14 16:04:00"
+ },
+ "results": [
+  {
+   "name": "50v-10",
+   "features": [
+    233.0,
+    2013.0,
+    2745.0,
+    0.005852516582130316,
+    0.7272727272727273,
+    0.09090909090909091,
+    0.18181818181818182,
+    366.0,
+    0.2145922746781116,
+    0.7854077253218884,
+    0.0,
+    0.0,
+    11.781115879828326,
+    1.3636363636363635,
+    1.4024034858734782,
+    0.8181818181818182,
+    2.61728882800296,
+    1.0,
+    1.0,
+    0.0
+   ],
+   "n_out_of_range": 0,
+   "describe_classes": 2,
+   "prompt_chars": 53704,
+   "top_ids": [
+    8,
+    4,
+    0,
+    3,
+    22,
+    42,
+    33,
+    32,
+    52,
+    40
+   ],
+   "top_pred": [
+    1.2579140663146973,
+    1.219964861869812,
+    1.1806135177612305,
+    1.1454644203186035,
+    1.0584012269973755,
+    1.0478214025497437,
+    1.0323227643966675,
+    1.031363606452942,
+    1.0218065977096558,
+    0.998525083065033
+   ],
+   "choice": 2,
+   "reason": "Generalizing from lot_sizing and network_design due to flow conservation and capacity/big-M inequalities, config 4 is a core high-yield choice while others like 0 and 32 face vetoes or degradation.",
+   "fallback": false,
+   "notes": {
+    "ours": "cfg 4",
+    "smac": "k=8 cluster 7",
+    "roar": "k=4 cluster 3",
+    "isacplus": "member 7/8"
+   },
+   "arms": {
+    "default": {
+     "time": 599.5687000751495,
+     "times": [
+      599.569
+     ],
+     "status": "timelimit",
+     "nodes": 9501,
+     "objective": 3350.429990246892,
+     "gap": 0.03243748466927948,
+     "has_solution": true,
+     "reached_target": false,
+     "censored": true
+    },
+    "ours": {
+     "time": 599.8427469730377,
+     "times": [
+      599.843
+     ],
+     "status": "timelimit",
+     "nodes": 21334,
+     "objective": 3371.3399839848285,
+     "gap": 0.04223892457819707,
+     "has_solution": true,
+     "reached_target": false,
+     "censored": true,
+     "verdict": "worse"
+    },
+    "isacplus": {
+     "time": 599.7689518928528,
+     "times": [
+      599.769
+     ],
+     "status": "timelimit",
+     "nodes": 6868,
+     "objective": 3421.6199931651345,
+     "gap": 0.07100877665727422,
+     "has_solution": true,
+     "reached_target": false,
+     "censored": true,
+     "verdict": "worse"
+    },
+    "smac": {
+     "time": 599.9014229774475,
+     "times": [
+      599.901
+     ],
+     "status": "timelimit",
+     "nodes": 6667,
+     "objective": 3421.6199931651345,
+     "gap": 0.07100877665727422,
+     "has_solution": true,
+     "reached_target": false,
+     "censored": true,
+     "verdict": "worse"
+    },
+    "roar": {
+     "time": 599.8938112258911,
+     "times": [
+      599.894
+     ],
+     "status": "timelimit",
+     "nodes": 10071,
+     "objective": 3394.4699944257727,
+     "gap": 0.06327106120890814,
+     "has_solution": true,
+     "reached_target": false,
+     "censored": true,
+     "verdict": "worse"
+    }
+   }
+  }
+ ]
+}
